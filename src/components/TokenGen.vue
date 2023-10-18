@@ -87,7 +87,7 @@ export default {
 
             for(var j=0; j < this.y; j++) {
                 for(var i=0; i < this.x; i++) {
-                    var name = allNames[i*this.y + j];
+                    var name = allNames[j*this.x + i];
                     result.push(dedent`.${name} {
                         background-position:-${cardWidth * i}px -${cardHeight * j}px;
                     }`);
