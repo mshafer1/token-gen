@@ -1,4 +1,5 @@
 <script setup>
+import TokenGen from './components/TokenGen.vue';
 // import { RouterLink, RouterView } from 'vue-router'
 </script>
 
@@ -23,39 +24,9 @@
         </div>
       </div>
     </div>
-    <div class="w3-row-padding w3-margin" style="display: flex;">
-      <div class="w3-col s12 m6"> <!-- inputs -->
-        <div class="w3-row-padding w3-margin">
-          <div class="w3-col s2"><label for="width">Server file path:</label></div>
-          <div class="w3-col s10"><input type="text" class="w3-input" name="url" /></div>
-        </div>
-        <div class="w3-row-padding w3-margin">
-          <div class="w3-col s2"><label for="width">File width (px):</label></div>
-          <div class="w3-col s10"><input type="number" class="w3-input" name="width" /></div>
-        </div>
-        <div class="w3-row-padding w3-margin">
-          <div class="w3-col s2"><label for="width">File height (px):</label></div>
-          <div class="w3-col s10"><input type="number" class="w3-input" name="height" /></div>
-        </div>
-        <div class="w3-row-padding w3-margin">
-          <div class="w3-col s2"><label for="width"># of tokens in row:</label></div>
-          <div class="w3-col s10"><input type="number" class="w3-input" name="x" /></div>
-        </div>
-        <div class="w3-row-padding w3-margin">
-          <div class="w3-col s2"><label for="width"># of rows:</label></div>
-          <div class="w3-col s10"><input type="number" class="w3-input" name="y" /></div>
-        </div>
-      </div>
-      <div class="w3-col s12 m6 w3-border-left w3-border-white"> <!-- output -->
-        <pre v-highlightjs="sourcecode">
-          <code class="css">
-div.card {
-  display: inline
-}
-        </code></pre>
-      </div>
-    </div>
+    <TokenGen />
   </div>
 </template>
 
 <style scoped></style>
+
