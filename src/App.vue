@@ -4,7 +4,7 @@ import TokenGen from './components/TokenGen.vue';
 </script>
 
 <template>
-  <div class="w3-padding">
+  <div class="w3-padding w3-container">
     <div>
       <h1>Token Gen</h1>
       <div class="w3-dropdown-hover">
