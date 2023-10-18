@@ -2,7 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import VueHighlightJS from 'vue3-highlightjs'
-import 'highlight.js/styles/magula.css'
+import 'highlight.js/styles/vs2015.css'
 import App from './App.vue'
 import router from './router'
 
