@@ -7,6 +7,11 @@
                         v-model="url" /></div>
             </div>
             <div class="w3-row-padding w3-margin">
+                <div class="w3-col s2"><label for="type">Token type:</label></div>
+                <div class="w3-col s10"><input type="text" class="w3-input" id="type"
+                        v-model="type" /></div>
+            </div>
+            <div class="w3-row-padding w3-margin">
                 <div class="w3-col s2"><label for="width">File width (px):</label></div>
                 <div class="w3-col s10"><input type="number" placeholder="1920" class="w3-input" id="width"
                         v-model="width" /></div>
@@ -23,6 +28,10 @@
             <div class="w3-row-padding w3-margin">
                 <div class="w3-col s2"><label for="y"># of rows:</label></div>
                 <div class="w3-col s10"><input type="number" placeholder="4" class="w3-input" id="y" min="1" v-model="y" /></div>
+            </div>
+            <div class="w3-row-padding w3-margin">
+                <div class="w3-col s2"><label for="names">{{ type }} names: <i class="fa fa-i"></i></label></div>
+                <div class="w3-col s10"><textarea placeholder="..." style="resize:vertical" rows="10" class="w3-input" id="names" min="1" v-model="names" /></div>
             </div>
         </div>
         <div class="w3-col s12 m6 w3-border-left w3-border-white"> <!-- output -->
@@ -45,6 +54,7 @@ export default {
             url: "",
             width: "",
             height: "",
+            type: "card",
             x: "",
             y: "",
         }
