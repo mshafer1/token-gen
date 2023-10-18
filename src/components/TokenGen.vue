@@ -73,10 +73,11 @@ export default {
             route: null,
         }
     },
-    created: function() {
-        this.route=useRoute();
-        console.log(this.route);
-
+    mounted: function() {
+        var params = Object.fromEntries(new URLSearchParams(location.search));
+        for (const [key, value] of Object.entries(params)) {
+            this[key] = value;
+        }
     },  
     computed: {
         gendCode: function () {
@@ -88,6 +89,9 @@ export default {
             for(var j=0; j < this.y; j++) {
                 for(var i=0; i < this.x; i++) {
                     var name = allNames[j*this.x + i];
+                    if (typeof(name) == "undefined") {
+                        continue;
+                    }
                     result.push(dedent`.${name} {
                         background-position:-${cardWidth * i}px -${cardHeight * j}px;
                     }`);
