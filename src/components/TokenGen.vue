@@ -98,6 +98,20 @@ export default {
                 }
             }
 
+            var form = this.$refs.form;
+            if (typeof (form) != "undefined") {
+                var data = {}
+                for (const [k, v] of Object.entries(this.$data)) {
+                    if (typeof (v) != 'undefined' && v != null && v.toString().trim() != '') {
+                        console.log(k, v)
+                        data[k] = v;
+                    }
+                }
+                var query_string = new URLSearchParams(data).toString()
+                console.log("query string", query_string);
+                history.pushState({}, null, `${location.pathname}?${query_string}`);
+            }
+
 
             return result.join('\n\n') +  "\n\n" + dedent`.${ this.type} {
                     display: inline-block;
