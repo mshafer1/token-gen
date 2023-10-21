@@ -1,5 +1,6 @@
 <script setup>
 import TokenGen from './components/TokenGen.vue';
+import Version from './components/Version.vue';
 // import { RouterLink, RouterView } from 'vue-router'
 </script>
 
@@ -24,9 +25,12 @@ import TokenGen from './components/TokenGen.vue';
         </div>
       </div>
     </div>
-    <TokenGen />
+    <div>
+      <TokenGen />
+    </div>
+    <div class="w3-padding">&nbsp;</div>
+    <Version />
   </div>
 </template>
 
 <style scoped></style>
-
