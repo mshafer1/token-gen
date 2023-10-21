@@ -4,43 +4,43 @@
             <form ref="form">
                 <!-- inputs -->
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="url">Server file path:</label></div>
+                    <div class="w3-col m2 s12 prevent-select"><label for="url">Server file path:</label></div>
                     <div class="w3-col m10 s12">
                         <input type="text" placeholder="/cards.jpg" class="w3-input theme-input" id="url" v-model="url" />
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="type">Token type:</label></div>
+                    <div class="w3-col m2 s12 prevent-select"><label for="type">Token type:</label></div>
                     <div class="w3-col m10 s12">
                         <input type="text" class="w3-input theme-input" id="type" v-model="type" />
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="width">File width (px):</label></div>
+                    <div class="w3-col m2 s12 prevent-select"><label for="width">File width (px):</label></div>
                     <div class="w3-col m10 s12">
                         <input type="number" placeholder="1920" class="w3-input theme-input" id="width" v-model="width" />
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="height">File height (px):</label></div>
+                    <div class="w3-col m2 s12 prevent-select"><label for="height">File height (px):</label></div>
                     <div class="w3-col m10 s12">
                         <input type="number" placeholder="1080" class="w3-input theme-input" id="height" v-model="height" />
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="x"># of tokens in row:</label></div>
+                    <div class="w3-col m2 s12 prevent-select"><label for="x"># of tokens in row:</label></div>
                     <div class="w3-col m10 s12">
                         <input type="number" placeholder="13" class="w3-input theme-input" id="x" min="1" v-model="x" />
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="y"># of rows:</label></div>
+                    <div class="w3-col m2 s12 prevent-select"><label for="y"># of rows:</label></div>
                     <div class="w3-col m10 s12">
                         <input type="number" placeholder="4" class="w3-input theme-input" id="y" min="1" v-model="y" />
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin">
-                    <div class="w3-col m2 s12"><label for="names">{{ type }} names:
+                    <div class="w3-col m2 s12 prevent-select"><label for="names">{{ type }} names:
                             <div class="w3-dropdown-hover" style="background-color: transparent;">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <div class="w3-dropdown-content w3-bar-block w3-border w3-border-black w3-padding"
@@ -91,7 +91,7 @@ export default {
     },
     computed: {
         gendCode: function () {
-            var result = ["/* region: code-gen'd */", `/* This code was generated on ${location} */`,]
+            var result = ["/* region: code-gen'd */", `/* This code was generated at:\n ${location}\n */`,]
             var cardWidth = this.width / this.x;
             var cardHeight = this.height / this.y;
             var allNames = this.names.split('\n');
