@@ -8,7 +8,7 @@ import Version from './components/Version.vue';
   <div class="w3-padding w3-container">
     <div>
       <h1>Token Gen</h1>
-      <div class="w3-dropdown-hover">
+      <div class="w3-dropdown-hover prevent-select">
         <button class="w3-button w3-black">Why?</button>
         <div class="w3-dropdown-content w3-bar-block w3-black">
           <div class="w3-margin w3-padding w3-dark-gray" style="min-width: 40em;">
@@ -29,8 +29,8 @@ import Version from './components/Version.vue';
       <TokenGen />
     </div>
     <div class="w3-padding">&nbsp;</div>
-    <Version />
   </div>
+  <Version />
 </template>
 
 <style scoped></style>
