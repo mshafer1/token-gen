@@ -1,5 +1,5 @@
 <template>
-    <div class="w3-row-padding w3-margin" style="display: flex;">
+    <div class="w3-row-padding w3-margin same-height-row">
         <div class="w3-col s12 m6 m-sticky">
             <form ref="form">
                 <!-- inputs -->
@@ -56,7 +56,7 @@
                 </div>
             </form>
         </div>
-        <div class="w3-col s12 m6 w3-border-left w3-border-white"> <!-- output -->
+        <div class="w3-col s12 m6 lg-border-left"> <!-- output -->
             <pre v-highlightjs="gendCode">
           <code class="css">
         </code></pre>

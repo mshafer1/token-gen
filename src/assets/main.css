@@ -1,0 +1,25 @@
+@media only screen{
+  .same-height-row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width:993px) {
+  .same-height-row {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width:993px) {
+  .same-height-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .lg-border-left {
+    border-left: 1px solid black;
+  }
+}
+
