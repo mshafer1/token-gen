@@ -57,7 +57,7 @@
             </form>
         </div>
         <div class="w3-col s12 m6 lg-border-left"> <!-- output -->
-            <pre v-highlightjs="gendCode">
+            <pre v-highlightjs="gendCode" contenteditable="true">
           <code class="css">
         </code></pre>
         </div>
